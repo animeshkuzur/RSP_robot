@@ -1,6 +1,7 @@
 import sys
 import json
 from os.path import abspath, isfile
+from random import randint
 
 class App:
 	def __init__(self,argv):
@@ -29,7 +30,11 @@ class App:
 				val = 0
 			print(val)
 		else:
-			print('no data')
+			val = randint(0, 2)
+			while(val==y1):
+				val = randint(0, 2)
+			print(val)
+
 
 	def learn(self,data):
 		l = self.length(data)
