@@ -30,9 +30,22 @@ class App:
 				val = 0
 			print(val)
 		else:
-			val = randint(0, 2)
-			while(val==y1):
-				val = randint(0, 2)
+			val = r1
+			if(r1==y1):
+				if(y1!=r2):
+					val = r2
+				if(y1!=r3):
+					val = r3
+			if(r2==y1):
+				if(y1!=r1):
+					val = r1
+				if(y1!=r3):
+					val = r3
+			if(r3==y1):
+				if(y1!=r1):
+					val = r1
+				if(y1!=r2):
+					val = r2
 			print(val)
 
 
@@ -40,7 +53,7 @@ class App:
 		l = self.length(data)
 		for i in range(2,l-1):
 			key = str(data[i-2]['robot'])+str(data[i-1]['robot'])+str(data[i]['robot'])+str(data[i]['you'])
-			val = data[i+1]['you']
+			val = data[i+1]['robot']
 			self.history[key] = val
 		return 0
 
