@@ -28,25 +28,16 @@ class App:
 			val = val + 1
 			if(val>2):
 				val = 0
-			print(val)
+			
 		else:
-			val = r1
-			if(r1==y1):
-				if(y1!=r2):
-					val = r2
-				if(y1!=r3):
-					val = r3
-			if(r2==y1):
-				if(y1!=r1):
-					val = r1
-				if(y1!=r3):
-					val = r3
-			if(r3==y1):
-				if(y1!=r1):
-					val = r1
-				if(y1!=r2):
-					val = r2
-			print(val)
+			val = randint(0, 2)
+
+		if(val==0):
+			print(2)
+		elif(val==1):
+			print(0)
+		else:
+			print(1)
 
 
 	def learn(self,data):
